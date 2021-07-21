@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+ 
+<SP.CheckInteraction>Check personality interaction</SP.CheckInteraction>
+<SP.CheckInteractionGroup>Check personality interaction (group)</SP.CheckInteractionGroup>
+<SP.CheckInteractionDesc>Displays a message telling you how these pawn's personalities interact.</SP.CheckInteractionDesc>
+
+<SP.InteractionMessage>{0} and {1} have {2} interactions.</SP.InteractionMessage>
+<SP.InteractionMessageGroup>These {0} pawns have a {1} interaction.</SP.InteractionMessageGroup>
+<SP.Int_Undefined>[UNDEFINED]</SP.Int_Undefined>
+<SP.Int_Harmonious>harmonious</SP.Int_Harmonious>
+<SP.Int_Diversive>diversive</SP.Int_Diversive>
+<SP.Int_Turmoil>turmoilous</SP.Int_Turmoil>
+
+</LanguageData>

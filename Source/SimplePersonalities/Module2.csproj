@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <NoStdLib>true</NoStdLib>
+    <LangVersion>preview</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <Configurations>v1.2;v1.3</Configurations>
+    <AssemblyName>SP_Module2_</AssemblyName>
+    <RootNamespace>SPM2</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.1.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.QuickReload" Version="1.0.0" />
+  </ItemGroup>
+
+  <!-- 1.2 -->
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='v1.2|AnyCPU'">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='v1.2|AnyCPU'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.2.2905" />
+  </ItemGroup>
+
+  <!-- 1.3 -->
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='v1.3|AnyCPU'">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\1.3\Assemblies\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='v1.3|AnyCPU'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3052-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SP_Module1_599">
+      <HintPath>SP_Module1.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="rename &quot;$(TargetPath)&quot; &quot;SP_Module2.dll&quot;" />
+  </Target>-->
+
+</Project>

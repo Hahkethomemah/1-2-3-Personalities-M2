@@ -8,6 +8,10 @@ namespace SPM2
 {
     public static class PersonalityComparer
     {
+        public static PersonalityInteraction CompareWith(this Pawn a, Pawn b)
+        {
+            return Compare(a?.TryGetEnneagramComp(), b?.TryGetEnneagramComp());
+        }
         public static PersonalityInteraction Compare(Pawn a, Pawn b)
         {
             return Compare(a?.TryGetEnneagramComp(), b?.TryGetEnneagramComp());
@@ -27,7 +31,7 @@ namespace SPM2
                 return PersonalityInteraction.Harmonious;
 
             // Otherwise they are diversive.
-            return PersonalityInteraction.Diversive;
+            return PersonalityInteraction.Complementary;
         }
 
         public static PersonalityInteraction Compare(IEnumerable<Pawn> pawns)
@@ -79,12 +83,12 @@ namespace SPM2
                     thinkCount++;
 
                 if (instCount > 0 && thinkCount > 0 && feelCount > 0)
-                    return PersonalityInteraction.Turmoil;
+                    return PersonalityInteraction.Disparate;
             }
 
             Core.Log($"{feelCount} {instCount} {thinkCount}");
 
-            return allAreSame ? PersonalityInteraction.Harmonious : PersonalityInteraction.Diversive;
+            return allAreSame ? PersonalityInteraction.Harmonious : PersonalityInteraction.Complementary;
         }
     }
 }

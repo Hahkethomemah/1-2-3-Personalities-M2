@@ -15,5 +15,7 @@ namespace SPM2
         public static PersonalityDrive SP_Drive_Instincts;
         public static PersonalityDrive SP_Drive_Feelings;
         public static PersonalityDrive SP_Drive_Thinking;
+        public static ThoughtDef SP_PassionateLovin;
+        public static ThoughtDef SP_PassionateLovinOneNightStand;
     }
 }

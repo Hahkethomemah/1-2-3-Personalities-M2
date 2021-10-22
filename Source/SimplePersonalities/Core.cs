@@ -1,10 +1,12 @@
 ﻿using HarmonyLib;
+using ReloaderAPI;
 using System;
 using UnityEngine;
 using Verse;
 
 namespace SPM2
 {
+    [Reloadable(ReloadBehaviour.All)]
     public class Core : Mod
     {
         public static void Log(string msg)
@@ -36,6 +38,7 @@ namespace SPM2
             try
             {
                 var harmony = new Harmony("hahkethomemah.simplepersonalities.module2");
+                Verse.Log.Message("PATCHALL");
                 harmony.PatchAll();
             }
             catch (Exception e)

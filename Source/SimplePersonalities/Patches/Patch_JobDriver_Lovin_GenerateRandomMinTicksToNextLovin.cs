@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using System.Collections;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -9,7 +10,6 @@ namespace SPM2.Patches
     /*
      * Changes Lovin' interval based on the involved pawn's personality harmony.
      */
-
     [HarmonyPatch(typeof(JobDriver_Lovin), "GenerateRandomMinTicksToNextLovin")]
     static class Patch_JobDriver_Lovin_GenerateRandomMinTicksToNextLovin
     {
@@ -23,7 +23,7 @@ namespace SPM2.Patches
             var interaction = PersonalityComparer.Compare(pawn, partner);
             switch (interaction)
             {
-                case PersonalityInteraction.Diversive:
+                case PersonalityInteraction.Complementary:
                 case PersonalityInteraction.Harmonious:
                     multi = 0.75f;
                     break;

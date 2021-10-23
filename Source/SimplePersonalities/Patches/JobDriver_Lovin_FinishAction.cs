@@ -5,10 +5,10 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using VanillaSocialInteractionsExpanded;
-using Verse;
 
 namespace SPM2.Patches
 {
+
     [HarmonyPatch]
     static class JobDriver_Lovin_FinishAction_Vanilla
     {

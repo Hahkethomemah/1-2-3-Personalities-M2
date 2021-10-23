@@ -34,8 +34,8 @@ namespace SPM2.Patches
             }
         }
 
-        [TweakValue("0SimplePersonality", 0, 2)] public static float chanceOfPassionateLovin = 0.1f;
-        [TweakValue("0SimplePersonality", 0, 2)] public static float passionateLovinDurationMultiplier = 2f;
+        [TweakValue("0SimplePersonality", 0, 4)] public static float chanceOfPassionateLovin = 0.1f;
+        [TweakValue("0SimplePersonality", 0, 4)] public static float passionateLovinDurationMultiplier = 2f;
         private static void ModifyLovinTicks(JobDriver_Lovin jobDriver)
         {
             var pawn = jobDriver.pawn;
@@ -74,8 +74,8 @@ namespace SPM2.Patches
             }
         }
 
-        [TweakValue("0SimplePersonality", 0, 2)] public static float chanceOfPassionateLovin = 0.1f;
-        [TweakValue("0SimplePersonality", 0, 2)] public static float passionateLovinDurationMultiplier = 2f;
+        [TweakValue("0SimplePersonality", 0, 4)] public static float chanceOfPassionateLovin = 0.1f;
+        [TweakValue("0SimplePersonality", 0, 4)] public static float passionateLovinDurationMultiplier = 2f;
         private static void ModifyLovinTicks(JobDriver_LovinOneNightStand jobDriver)
         {
             var pawn = jobDriver.pawn;

@@ -10,7 +10,7 @@ namespace SPM2.Patches
     [HarmonyPatch(typeof(JobDriver_LovinOneNightStand), "MakeNewToils")]
     static class Patch_JobDriver_LovinOneNightStand
     {
-        [TweakValue("0SimplePersonality", 0, 2)] public static float harmoniousCoupleChance = 0.2f;
+        [TweakValue("0SimplePersonality", 0, 4)] public static float harmoniousCoupleChance = 0.2f;
         static IEnumerable<Toil> Postfix(IEnumerable<Toil> __result, JobDriver_LovinOneNightStand __instance)
         {
             foreach (var r in __result) yield return r;

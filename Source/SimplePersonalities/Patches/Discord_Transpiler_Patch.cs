@@ -1,7 +1,10 @@
 ﻿using HarmonyLib;
+using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using UnityEngine.UIElements;
 using VanillaSocialInteractionsExpanded;
 using Verse;
 

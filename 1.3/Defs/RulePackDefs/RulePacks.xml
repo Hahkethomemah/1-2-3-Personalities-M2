@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>SP_FactionLeaderDescription</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>root->[FACTION_LEADER_nameDef] leads [FACTION_LEADER_possessive] people by relying on [DRIVE] 1</li>
+        <li>root->[FACTION_LEADER_nameDef] leads [FACTION_LEADER_possessive] people by relying on [DRIVE] 2</li>
+        <li>root->[FACTION_LEADER_nameDef] leads [FACTION_LEADER_possessive] people by relying on [DRIVE] 3</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>

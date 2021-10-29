@@ -10,7 +10,10 @@ namespace SPM2.Patches
     {
         static void Postfix(ref float __result, Pawn initiator, Pawn recipient)
         {
-            __result *= Mathf.Min(GetWeightModifierFor(initiator, recipient), GetWeightModifierFor(recipient, initiator));
+            if (Core.settings.SPM2_Couples)
+            {
+                __result *= Mathf.Min(GetWeightModifierFor(initiator, recipient), GetWeightModifierFor(recipient, initiator));
+            }
         }
 
         static float GetWeightModifierFor(Pawn pawn, Pawn anotherPawn)

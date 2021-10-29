@@ -15,22 +15,25 @@ namespace SPM2.Patches
     {
         static void Postfix(JobDriver_Lovin __instance, Pawn pawn, ref int __result, TargetIndex ___PartnerInd)
         {
-            var partner = (Pawn) ((Thing) __instance.job.GetTarget(___PartnerInd));
-            if (partner == null)
-                return;
-
-            float multi = 1f;
-            var interaction = PersonalityComparer.Compare(pawn, partner);
-            switch (interaction)
+            if (Core.settings.SPM2_Couples)
             {
-                case PersonalityInteraction.Complementary:
-                case PersonalityInteraction.Harmonious:
-                    multi = 0.75f;
-                    break;
-            }
+                var partner = (Pawn)((Thing)__instance.job.GetTarget(___PartnerInd));
+                if (partner == null)
+                    return;
 
-            if (multi != 1f)
-                __result = Mathf.RoundToInt(__result * multi);
+                float multi = 1f;
+                var interaction = PersonalityComparer.Compare(pawn, partner);
+                switch (interaction)
+                {
+                    case PersonalityInteraction.Complementary:
+                    case PersonalityInteraction.Harmonious:
+                        multi = 0.75f;
+                        break;
+                }
+
+                if (multi != 1f)
+                    __result = Mathf.RoundToInt(__result * multi);
+            }
         }
     }
 }

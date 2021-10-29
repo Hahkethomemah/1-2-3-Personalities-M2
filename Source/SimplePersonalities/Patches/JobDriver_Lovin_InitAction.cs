@@ -34,18 +34,21 @@ namespace SPM2.Patches
             }
         }
 
-        [TweakValue("0SimplePersonality", 0, 4)] public static float chanceOfPassionateLovin = 0.1f;
-        [TweakValue("0SimplePersonality", 0, 4)] public static float passionateLovinDurationMultiplier = 2f;
+        [TweakValue("0SimplePersonalities", 0, 4)] public static float chanceOfPassionateLovin = 0.1f;
+        [TweakValue("0SimplePersonalities", 0, 4)] public static float passionateLovinDurationMultiplier = 2f;
         private static void ModifyLovinTicks(JobDriver_Lovin jobDriver)
         {
-            var pawn = jobDriver.pawn;
-            var parther = jobDriver.Partner;
-            var interaction = PersonalityComparer.Compare(pawn, parther);
-            if (interaction == PersonalityInteraction.Complementary && Rand.Chance(chanceOfPassionateLovin))
+            if (Core.settings.SPM2_Couples)
             {
-                jobDriver.collideWithPawns = true; // we treat it as a bool to indicate that it's a passionate lovin
-                parther.jobs.curDriver.collideWithPawns = true;
-                jobDriver.ticksLeft *= 2;
+                var pawn = jobDriver.pawn;
+                var parther = jobDriver.Partner;
+                var interaction = PersonalityComparer.Compare(pawn, parther);
+                if (interaction == PersonalityInteraction.Complementary && Rand.Chance(chanceOfPassionateLovin))
+                {
+                    jobDriver.collideWithPawns = true; // we treat it as a bool to indicate that it's a passionate lovin
+                    parther.jobs.curDriver.collideWithPawns = true;
+                    jobDriver.ticksLeft *= 2;
+                }
             }
         }
     }
@@ -74,18 +77,21 @@ namespace SPM2.Patches
             }
         }
 
-        [TweakValue("0SimplePersonality", 0, 4)] public static float chanceOfPassionateLovin = 0.1f;
-        [TweakValue("0SimplePersonality", 0, 4)] public static float passionateLovinDurationMultiplier = 2f;
+        [TweakValue("0SimplePersonalities", 0, 4)] public static float chanceOfPassionateLovin = 0.1f;
+        [TweakValue("0SimplePersonalities", 0, 4)] public static float passionateLovinDurationMultiplier = 2f;
         private static void ModifyLovinTicks(JobDriver_LovinOneNightStand jobDriver)
         {
-            var pawn = jobDriver.pawn;
-            var parther = jobDriver.Partner;
-            var interaction = PersonalityComparer.Compare(pawn, parther);
-            if (interaction == PersonalityInteraction.Complementary && Rand.Chance(chanceOfPassionateLovin))
+            if (Core.settings.SPM2_Couples)
             {
-                jobDriver.collideWithPawns = true; // we treat it as a bool to indicate that it's a passionate lovin
-                parther.jobs.curDriver.collideWithPawns = true;
-                jobDriver.ticksLeft *= 2;
+                var pawn = jobDriver.pawn;
+                var parther = jobDriver.Partner;
+                var interaction = PersonalityComparer.Compare(pawn, parther);
+                if (interaction == PersonalityInteraction.Complementary && Rand.Chance(chanceOfPassionateLovin))
+                {
+                    jobDriver.collideWithPawns = true; // we treat it as a bool to indicate that it's a passionate lovin
+                    parther.jobs.curDriver.collideWithPawns = true;
+                    jobDriver.ticksLeft *= 2;
+                }
             }
         }
     }

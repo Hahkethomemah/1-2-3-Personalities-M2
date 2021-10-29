@@ -10,31 +10,27 @@ namespace SPM2.Patches
     [HarmonyPatch(typeof(JobDriver_LovinOneNightStand), "MakeNewToils")]
     static class Patch_JobDriver_LovinOneNightStand
     {
-        [TweakValue("0SimplePersonality", 0, 4)] public static float harmoniousCoupleChance = 0.2f;
+        [TweakValue("0SimplePersonalities", 0, 4)] public static float harmoniousCoupleChance = 0.2f;
         static IEnumerable<Toil> Postfix(IEnumerable<Toil> __result, JobDriver_LovinOneNightStand __instance)
         {
             foreach (var r in __result) yield return r;
-            yield return new Toil
+            if (Core.settings.SPM2_Couples)
             {
-                initAction = delegate
+                yield return new Toil
                 {
-                    var pawn = __instance.pawn;
-                    var partner = (Pawn)(Thing)__instance.job.GetTarget(TargetIndex.A);
-                    var interaction = pawn.CompareWith(partner);
-                    if (interaction == PersonalityInteraction.Harmonious && Rand.Chance(harmoniousCoupleChance))
+                    initAction = delegate
                     {
-                        BecomeCouple(pawn, partner);
-                        if (Rand.Chance(0.5f))
+                        var pawn = __instance.pawn;
+                        var partner = (Pawn)(Thing)__instance.job.GetTarget(TargetIndex.A);
+                        var interaction = pawn.CompareWith(partner);
+                        if (interaction == PersonalityInteraction.Harmonious && Rand.Chance(harmoniousCoupleChance))
                         {
-                            // add other poison
-                        } 
-                        else 
-                        {
-                            // add another one
+                            BecomeCouple(pawn, partner);
                         }
                     }
-                }
-            };
+                };
+            }
+
         }
         static void BecomeCouple(Pawn initiator, Pawn recipient)
         {

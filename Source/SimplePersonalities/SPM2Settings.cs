@@ -42,15 +42,24 @@ namespace SPM2
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(rect);
             listingStandard.CheckboxLabeled("SP.SPM2_Couples".Translate(), ref SPM2_Couples, "SP.SPM2_CouplesDesc".Translate());
-            listingStandard.CheckboxLabeled("SP.SPM2_OneNightStand".Translate(), ref SPM2_OneNightStand, "SP.SPM2_OneNightStandDesc".Translate());
+
+            if (Core.VSIEInstalled)
+                listingStandard.CheckboxLabeled("SP.SPM2_OneNightStand".Translate(), ref SPM2_OneNightStand, "SP.SPM2_OneNightStandDesc".Translate());
+
             listingStandard.CheckboxLabeled("SP.SPM2_Caravans".Translate(), ref SPM2_Caravans, "SP.SPM2_CaravansDesc".Translate());
-            listingStandard.CheckboxLabeled("SP.SPM2_ManyHandsMakeLightWork".Translate(), ref SPM2_ManyHandsMakeLightWork, "SP.SPM2_ManyHandsMakeLightWorkDesc".Translate());
-            listingStandard.CheckboxLabeled("SP.SPM2_Discord".Translate(), ref SPM2_Discord, "SP.SPM2_DiscordDesc".Translate());
-            listingStandard.CheckboxLabeled("SP.SPM2_Venting".Translate(), ref SPM2_Venting, "SP.SPM2_VentingDesc".Translate());
+            if (Core.VSIEInstalled)
+            {
+                listingStandard.CheckboxLabeled("SP.SPM2_ManyHandsMakeLightWork".Translate(), ref SPM2_ManyHandsMakeLightWork, "SP.SPM2_ManyHandsMakeLightWorkDesc".Translate());
+                listingStandard.CheckboxLabeled("SP.SPM2_Discord".Translate(), ref SPM2_Discord, "SP.SPM2_DiscordDesc".Translate());
+                listingStandard.CheckboxLabeled("SP.SPM2_Venting".Translate(), ref SPM2_Venting, "SP.SPM2_VentingDesc".Translate());
+            }
+
             listingStandard.CheckboxLabeled("SP.SPM2_Leaders".Translate(), ref SPM2_Leaders, "SP.SPM2_LeadersDesc".Translate());
             listingStandard.CheckboxLabeled("SP.SPM2_Trading".Translate(), ref SPM2_Trading, "SP.SPM2_TradingDesc".Translate());
             listingStandard.CheckboxLabeled("SP.SPM2_FriendlyFire".Translate(), ref SPM2_FriendlyFire, "SP.SPM2_FriendlyFireDesc".Translate());
-            listingStandard.CheckboxLabeled("SP.SPM2_ObtainingNewCharacterTraits".Translate(), ref SPM2_ObtainingNewCharacterTraits, "SP.SPM2_ObtainingNewCharacterTraitsDesc".Translate());
+            if (Core.VSIEInstalled)
+                listingStandard.CheckboxLabeled("SP.SPM2_ObtainingNewCharacterTraits".Translate(), ref SPM2_ObtainingNewCharacterTraits, "SP.SPM2_ObtainingNewCharacterTraitsDesc".Translate());
+            
             listingStandard.End();
             base.Write();
         }

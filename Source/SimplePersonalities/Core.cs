@@ -10,6 +10,8 @@ namespace SPM2
     public class Core : Mod
     {
         public static SPM2Settings settings;
+
+        public static bool VSIEInstalled;
         public static void Log(string msg)
         {
             Verse.Log.Message($"<color=#34eb92>[Simple Personalities M2]</color> {msg}");
@@ -38,6 +40,7 @@ namespace SPM2
             Verse.Log.Message("PATCHALL");
             harmony.PatchAll();
             settings = GetSettings<SPM2Settings>();
+            VSIEInstalled = ModsConfig.IsActive("VanillaExpanded.VanillaSocialInteractionsExpanded");
         }
 
         public override string SettingsCategory()

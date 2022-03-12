@@ -17,9 +17,7 @@ namespace SPM2
         public static PersonalityDrive SP_Drive_Thinking;
         public static ThoughtDef SP_PassionateLovin;
         public static ThoughtDef SP_PassionateLovinOneNightStand;
-        public static InteractionDef VSIE_Vent_Harmonious;
         public static RulePackDef SP_FactionLeaderDescription;
-
         public static RulePackDef SP_ReplacingTraitTitle;
         public static RulePackDef SP_ReplacingTraitText;
         public static RulePackDef SP_ObtainingNewTraitTitle;

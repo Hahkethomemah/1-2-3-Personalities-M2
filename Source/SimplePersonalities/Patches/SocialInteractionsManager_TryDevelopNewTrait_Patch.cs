@@ -1,12 +1,33 @@
 ﻿using HarmonyLib;
-using VanillaSocialInteractionsExpanded;
+using System.Reflection;
 using Verse;
 
 namespace SPM2.Patches
 {
-    [HarmonyPatch(typeof(SocialInteractionsManager), nameof(SocialInteractionsManager.TryDevelopNewTrait))]
+    [HarmonyPatch]
     public static class SocialInteractionsManager_TryDevelopNewTrait_Patch
     {
+        [HarmonyPrepare]
+        public static bool Prepare()
+        {
+            if (Core.VSIEInstalled)
+            {
+                FindMethod();
+                return methodTarget != null;
+            }
+            return false;
+        }
+
+        private static void FindMethod()
+        {
+            methodTarget = AccessTools.Method(typeof(VanillaSocialInteractionsExpanded.SocialInteractionsManager), nameof(VanillaSocialInteractionsExpanded.SocialInteractionsManager.TryDevelopNewTrait));
+        }
+
+        [HarmonyTargetMethod]
+        public static MethodBase TargetMethod() => methodTarget;
+
+        public static MethodInfo methodTarget;
+
         public static bool developedNewTrait;
         private static void Prefix(Pawn pawn)
         {
@@ -21,11 +42,6 @@ namespace SPM2.Patches
         private static void Postfix()
         {
             developedNewTrait = true;
-
-            if (!developedNewTrait && Core.settings.SPM2_ObtainingNewCharacterTraits)
-            {
-
-            }
         }
     }
 }

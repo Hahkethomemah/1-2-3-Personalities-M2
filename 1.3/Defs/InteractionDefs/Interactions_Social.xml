@@ -3,7 +3,7 @@
 
   <!-- Random social interactions -->
 
-  <InteractionDef>
+  <InteractionDef MayRequire="VanillaExpanded.VanillaSocialInteractionsExpanded">
     <defName>VSIE_Vent_Harmonious</defName>
     <label>vent</label>
     <workerClass>VanillaSocialInteractionsExpanded.InteractionWorker_Vent</workerClass>

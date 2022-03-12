@@ -14,11 +14,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Publicizer" Version="1.0.1">
+    <PackageReference Include="Krafs.Publicizer" Version="1.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.1.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.0" ExcludeAssets="runtime" />
     <PackageReference Include="Lib.QuickReload" Version="1.1.2" />
   </ItemGroup>
 
@@ -31,7 +31,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(Configuration)|$(Platform)'=='v1.2|AnyCPU'">
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3159-beta" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3299-beta" />
   </ItemGroup>
 
   <!-- 1.3 -->

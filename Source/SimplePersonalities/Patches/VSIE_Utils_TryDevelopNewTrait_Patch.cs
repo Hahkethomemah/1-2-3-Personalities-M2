@@ -2,15 +2,36 @@
 using RimWorld;
 using SPM1;
 using System.Collections.Generic;
-using VanillaSocialInteractionsExpanded;
+using System.Reflection;
 using Verse;
 using Verse.Grammar;
 
 namespace SPM2.Patches
 {
-    [HarmonyPatch(typeof(VSIE_Utils), nameof(VSIE_Utils.TryDevelopNewTrait))]
+    [HarmonyPatch]
     public static class VSIE_Utils_TryDevelopNewTrait_Patch
     {
+        [HarmonyPrepare]
+        public static bool Prepare()
+        {
+            if (Core.VSIEInstalled)
+            {
+                FindMethod();
+                return methodTarget != null;
+            }
+            return false;
+        }
+
+        private static void FindMethod()
+        {
+            methodTarget = AccessTools.Method(typeof(VanillaSocialInteractionsExpanded.VSIE_Utils), nameof(VanillaSocialInteractionsExpanded.VSIE_Utils.TryDevelopNewTrait));
+        }
+
+        [HarmonyTargetMethod]
+        public static MethodBase TargetMethod() => methodTarget;
+
+        public static MethodInfo methodTarget;
+
         private static HashSet<PersonalityTrait> tempHashset = new HashSet<PersonalityTrait>();
         private static void Postfix(Pawn pawn)
         {

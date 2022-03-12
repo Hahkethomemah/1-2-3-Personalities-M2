@@ -1,14 +1,34 @@
 ﻿using HarmonyLib;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Reflection.Emit;
-using VanillaSocialInteractionsExpanded;
 using Verse;
 
 namespace SPM2.Patches
 {
-    [HarmonyPatch(typeof(GetStatValue_Patch), nameof(GetStatValue_Patch.Postfix))]
+    [HarmonyPatch]
     public static class GetStatValue_Patch_Postfix_Transpiler_Patch
     {
+        [HarmonyPrepare]
+        public static bool Prepare()
+        {
+            if (Core.VSIEInstalled)
+            {
+                FindMethod();
+                return methodTarget != null;
+            }
+            return false;
+        }
+
+        private static void FindMethod()
+        {
+            methodTarget = AccessTools.Method(typeof(VanillaSocialInteractionsExpanded.GetStatValue_Patch), nameof(VanillaSocialInteractionsExpanded.GetStatValue_Patch.Postfix));
+        }
+
+        [HarmonyTargetMethod]
+        public static MethodBase TargetMethod() => methodTarget;
+
+        public static MethodInfo methodTarget;
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             int num = 0;

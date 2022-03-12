@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using VanillaSocialInteractionsExpanded;
+using Verse.AI;
 
 namespace SPM2.Patches
 {
@@ -45,16 +45,31 @@ namespace SPM2.Patches
     [HarmonyPatch]
     static class JobDriver_Lovin_FinishAction_VSIE
     {
-        [HarmonyTargetMethods]
-        public static IEnumerable<MethodBase> TargetMethods()
+        [HarmonyPrepare]
+        public static bool Prepare()
         {
-            yield return AccessTools.GetDeclaredMethods(typeof(JobDriver_LovinOneNightStand)).LastOrDefault(x => x.Name.Contains("<MakeNewToils>") && x.ReturnType == typeof(void));
+            if (Core.VSIEInstalled)
+            {
+                FindMethod();
+                return methodTarget != null;
+            }
+            return false;
         }
+
+        private static void FindMethod()
+        {
+            methodTarget = AccessTools.GetDeclaredMethods(typeof(VanillaSocialInteractionsExpanded.JobDriver_LovinOneNightStand)).LastOrDefault(x => x.Name.Contains("<MakeNewToils>") && x.ReturnType == typeof(void));
+        }
+
+        [HarmonyTargetMethod]
+        public static MethodBase TargetMethod() => methodTarget;
+
+        public static MethodInfo methodTarget;
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             foreach (var code in instructions)
             {
-                if (code.LoadsField(AccessTools.Field(typeof(VSIE_DefOf), "VSIE_GotSomeLovin")))
+                if (code.LoadsField(AccessTools.Field(typeof(VanillaSocialInteractionsExpanded.VSIE_DefOf), "VSIE_GotSomeLovin")))
                 {
                     yield return new CodeInstruction(OpCodes.Ldarg_0);
                     yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(JobDriver_Lovin_FinishAction_VSIE), nameof(LoadThoughtDef)));
@@ -65,7 +80,7 @@ namespace SPM2.Patches
                 }
             }
         }
-        private static ThoughtDef LoadThoughtDef(JobDriver_LovinOneNightStand jobDriver)
+        private static ThoughtDef LoadThoughtDef(JobDriver jobDriver)
         {
             if (jobDriver.collideWithPawns)
             {

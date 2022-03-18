@@ -55,27 +55,30 @@ namespace SPM2.Patches
             if (Core.settings.SPM2_Discord)
             {
                 var worker = workers.Key;
-                var pawns = worker.Map.mapPawns.SpawnedPawnsInFaction(worker.Faction).Where(x => x != worker && x != null && x.RaceProps.Humanlike
-                    && x.mindState != null && VanillaSocialInteractionsExpanded.VSIE_Utils.workTags.Contains(x.mindState.lastJobTag) && x.needs?.mood?.CurLevelPercentage < 0.3f && !x.WorkTagIsDisabled(WorkTags.Violent)
-                    && x.Position.DistanceTo(worker.Position) < 10).ToHashSet();
-                var value = workers.Value as VanillaSocialInteractionsExpanded.Workers;
-                foreach (var kvp in value.workersWithWorkingTicks)
+                if (worker.Map != null)
                 {
-                    if (kvp.Key != null && kvp.Key.needs?.mood?.CurInstantLevelPercentage < 0.3f && kvp.Value.workTick > 3000
-                        && worker.relations?.OpinionOf(kvp.Key) < 0)
+                    var pawns = worker.Map.mapPawns.SpawnedPawnsInFaction(worker.Faction).Where(x => x != worker && x != null && x.RaceProps.Humanlike
+                        && x.mindState != null && VanillaSocialInteractionsExpanded.VSIE_Utils.workTags.Contains(x.mindState.lastJobTag) && x.needs?.mood?.CurLevelPercentage < 0.3f && !x.WorkTagIsDisabled(WorkTags.Violent)
+                        && x.Position.DistanceTo(worker.Position) < 10).ToHashSet();
+                    var value = workers.Value as VanillaSocialInteractionsExpanded.Workers;
+                    foreach (var kvp in value.workersWithWorkingTicks)
                     {
-                        pawns.Add(kvp.Key);
+                        if (kvp.Key != null && kvp.Key.needs?.mood?.CurInstantLevelPercentage < 0.3f && kvp.Value.workTick > 3000
+                            && worker.relations?.OpinionOf(kvp.Key) < 0)
+                        {
+                            pawns.Add(kvp.Key);
+                        }
                     }
-                }
-                pawns.Add(worker);
-                var interaction = PersonalityComparer.Compare(pawns);
-                if (interaction == PersonalityInteraction.Harmonious)
-                {
-                    return harmoniousChanceMult;
-                }
-                else if (interaction == PersonalityInteraction.Disparate)
-                {
-                    return disparateMult;
+                    pawns.Add(worker);
+                    var interaction = PersonalityComparer.Compare(pawns);
+                    if (interaction == PersonalityInteraction.Harmonious)
+                    {
+                        return harmoniousChanceMult;
+                    }
+                    else if (interaction == PersonalityInteraction.Disparate)
+                    {
+                        return disparateMult;
+                    }
                 }
             }
             return 1f;

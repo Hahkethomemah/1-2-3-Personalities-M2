@@ -9,8 +9,8 @@
 <SP.InteractionMessageGroup>These {0} pawns have a {1} interaction.</SP.InteractionMessageGroup>
 <SP.Int_Undefined>[UNDEFINED]</SP.Int_Undefined>
 <SP.Int_Harmonious>harmonious</SP.Int_Harmonious>
-<SP.Int_Diversive>complementary</SP.Int_Diversive>
-<SP.Int_Turmoil>disparate</SP.Int_Turmoil>
+<SP.Int_Complementary>complementary</SP.Int_Complementary>
+<SP.Int_Disparate>disparate</SP.Int_Disparate>
 <SP.FactionLeaderDescriptionNoName>leads {0} people by relying on {1}</SP.FactionLeaderDescriptionNoName>
 <SP.TradeNegotiatorTooltip>{NEGOTIATOR_nameDef} understands how to deal with representatives of this faction. {NEGOTIATOR_pronoun} receives following bonuses:\n{1}.</SP.TradeNegotiatorTooltip>
 <SP.BetterPrices>{0}% better prices</SP.BetterPrices>

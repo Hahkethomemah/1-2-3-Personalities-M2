@@ -52,7 +52,7 @@
       <Private>false</Private>
     </Reference>
     <Reference Include="VanillaSocialInteractionsExpanded">
-      <HintPath>..\..\..\VanillaSocialInteractionsExpanded\1.3\Assemblies\VanillaSocialInteractionsExpanded.dll</HintPath>
+      <HintPath>VanillaSocialInteractionsExpanded.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

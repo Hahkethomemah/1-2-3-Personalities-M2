@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OQ5TeG5uTtiwtWSr0SSWTlY90lVM7FvTZ0MY474mdTPoDsKKs9RXUF8KdG5wE5JISeDakysO+QDrpHjo111NSA==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\1-2-3 Personalities M2\\Source\\SimplePersonalities\\Module2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\spain\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3052-beta\\krafs.rimworld.ref.1.3.3052-beta.nupkg.sha512",
+    "C:\\Users\\spain\\.nuget\\packages\\lib.harmony\\2.1.0\\lib.harmony.2.1.0.nupkg.sha512",
+    "C:\\Users\\spain\\.nuget\\packages\\lib.quickreload\\1.0.0\\lib.quickreload.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

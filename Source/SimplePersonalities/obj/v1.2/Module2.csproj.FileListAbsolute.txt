@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\1-2-3 Personalities M2\Source\SimplePersonalities\obj\v1.2\Module2.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\1-2-3 Personalities M2\Source\SimplePersonalities\obj\v1.2\Module2.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\1-2-3 Personalities M2\Source\SimplePersonalities\obj\v1.2\Module2.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\1-2-3 Personalities M2\1.2\Assemblies\SP_Module2_068.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\1-2-3 Personalities M2\Source\SimplePersonalities\obj\v1.2\SP_Module2_068.dll

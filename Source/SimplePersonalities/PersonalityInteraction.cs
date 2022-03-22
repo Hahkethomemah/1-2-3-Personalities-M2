@@ -4,7 +4,7 @@
     {
         Undefined,
         Harmonious,
-        Diversive,
-        Turmoil
+        Complementary,
+        Disparate
     }
 }

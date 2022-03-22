@@ -1,12 +1,17 @@
 ﻿using HarmonyLib;
+using ReloaderAPI;
 using System;
 using UnityEngine;
 using Verse;
 
 namespace SPM2
 {
+    [Reloadable(ReloadBehaviour.All)]
     public class Core : Mod
     {
+        public static SPM2Settings settings;
+
+        public static bool VSIEInstalled;
         public static void Log(string msg)
         {
             Verse.Log.Message($"<color=#34eb92>[Simple Personalities M2]</color> {msg}");
@@ -28,38 +33,24 @@ namespace SPM2
         {
             Verse.Log.Message($"<color=#34eb92>[Simple Personalities M2] [TRACE] </color> {msg}");
         }
-
         public Core(ModContentPack pack) : base(pack)
         {
             Log("Module 2 reporting for duty!");
-
-            try
-            {
-                var harmony = new Harmony("hahkethomemah.simplepersonalities.module2");
-                harmony.PatchAll();
-            }
-            catch (Exception e)
-            {
-                Error("Failed to patch 1 or more methods! The mod will probably not work!", e);
-            }
-
-            LongEventHandler.QueueLongEvent(Load, "SP.LoadingLabel", false, null);
-        }
-
-        public void Load()
-        {
-            // Do any work here.
-            //GetSettings<Settings>();
+            var harmony = new Harmony("hahkethomemah.simplepersonalities.module2");
+            Verse.Log.Message("PATCHALL");
+            harmony.PatchAll();
+            settings = GetSettings<SPM2Settings>();
+            VSIEInstalled = ModsConfig.IsActive("VanillaExpanded.VanillaSocialInteractionsExpanded");
         }
 
         public override string SettingsCategory()
         {
             return Content.Name;
         }
-
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            //Settings.DrawUI(inRect);
+            base.DoSettingsWindowContents(inRect);
+            settings.DoSettingsWindowContents(inRect);
         }
     }
 }

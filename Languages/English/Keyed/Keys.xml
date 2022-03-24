@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
  
-<SP.CheckInteraction>Check personality interaction</SP.CheckInteraction>
-<SP.CheckInteractionGroup>Check personality interaction (group)</SP.CheckInteractionGroup>
+<SP.CheckInteraction>Check social interaction</SP.CheckInteraction>
+<SP.CheckInteractionGroup>Check social interaction</SP.CheckInteractionGroup>
 <SP.CheckInteractionDesc>Displays a message telling you how these pawn's personalities interact.</SP.CheckInteractionDesc>
 
 <SP.InteractionMessage>{0} and {1} have {2} interactions.</SP.InteractionMessage>

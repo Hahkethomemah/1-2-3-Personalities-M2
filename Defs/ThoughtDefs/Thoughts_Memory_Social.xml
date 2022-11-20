@@ -9,8 +9,8 @@
     <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
     <stages>
       <li>
-        <label>got some passionate lovin'</label>
-        <description>There's nothing like a tumble between the sheets to lift the mood.</description>
+        <label>almost destroyed the bedroom</label>
+        <description>Had some passionate lovin. Things like that keep our relationship interesting.</description>
         <baseMoodEffect>8</baseMoodEffect>
         <baseOpinionOffset>6</baseOpinionOffset>
       </li>
@@ -25,8 +25,8 @@
     <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
     <stages>
       <li>
-        <label>got some passionate lovin'</label>
-        <description>There's nothing like a tumble between the sheets to lift the mood.</description>
+        <label>memorable booty call</label>
+        <description>Had some passionate lovin. I can't get what we did out of my head.</description>
         <baseMoodEffect>8</baseMoodEffect>
         <baseOpinionOffset>6</baseOpinionOffset>
       </li>

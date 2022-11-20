@@ -3,13 +3,17 @@ using HarmonyLib;
 using RimWorld;
 using SPM1.Comps;
 using SPM1;
+using UnityEngine;
 using Verse;
 
 namespace SPM2.Patches
 {
+    [StaticConstructorOnStartup] // Shut up rimworld.
     [HarmonyPatch(typeof(CompEnneagram), "CompGetGizmosExtra")]
     static class Patch_CompEnneagram_CompGetGizmosExtra
     {
+        static Texture2D icon;
+
         static void Postfix(CompEnneagram __instance, ref IEnumerable<Gizmo> __result)
         {
             __result = Process(__result, __instance is not CompEnneagramAnimal, __instance.parent as Pawn);
@@ -32,10 +36,14 @@ namespace SPM2.Patches
 
             bool isGroup = count > 2;
 
+            icon ??= ContentFinder<Texture2D>.Get("SPM2/InteractionIcon");
+
             yield return new Command_Action()
             {
                 defaultLabel = (isGroup ? "SP.CheckInteractionGroup" : "SP.CheckInteraction").Translate(),
                 alsoClickIfOtherInGroupClicked = false,
+                icon = icon,
+                defaultIconColor = new Color32(221, 247, 153, 255),
                 action = () =>
                 {
                     Core.Trace($"Group selection ({pawns.Count} pawns)");

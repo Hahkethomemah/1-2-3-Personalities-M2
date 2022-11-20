@@ -75,7 +75,7 @@ namespace SPM2.Patches
                 TaleRecorder.RecordTale(TaleDefOf.BecameLover, initiator, recipient);
                 if (PawnUtility.ShouldSendNotificationAbout(initiator) || PawnUtility.ShouldSendNotificationAbout(recipient))
                 {
-                    worker.GetNewLoversLetter(initiator, recipient, oldLoversAndFiances, oldLoversAndFiances2, out _, out _, out _, out _);
+                    worker.GetNewLoversLetter(initiator, recipient, oldLoversAndFiances, oldLoversAndFiances2, true, out _, out _, out _, out _);
                 }
                 LovePartnerRelationUtility.TryToShareBed(initiator, recipient);
             }

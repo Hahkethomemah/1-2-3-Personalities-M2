@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>SP_FactionLeaderDescription</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>root->Residents of this settlement are known to put [DRIVE] above anything else. Send a colonist with matching worldview to make interactions more effective.</li>
+        <li>root->The inhabitants of this place are known for putting [DRIVE] first. Send a colonist with matching worldview to make interactions more effective.</li>
+        <li>root->Under influence of [FACTION_LEADER_nameDef], this settlement promotes acting on [DRIVE]. Send a colonist with matching worldview to make interactions more effective.</li>
+        <li>root->Local leader tries to be more like [FACTION_LEADER_nameDef], which makes them vulnerable to manipulation by anyone who acts on [DRIVE]. Send a colonist with matching worldview to make interactions more effective.</li>
+        <li>root->[FACTION_LEADER_nameDef] leads [FACTION_LEADER_possessive] people by relying on [DRIVE]. [FACTION_LEADER_possessive] values easily spread among the faction. Send a colonist with matching worldview to make interactions more effective.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>SP_ObtainingNewTraitTitle</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>root->[PAWN_nameDef] has grown as a person</li>
+        <li>root->[PAWN_nameDef] developed a new personality trait</li>
+        <li>root->[PAWN_nameDef] overcame [PAWN_possessive] limitations</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>SP_ObtainingNewTraitText</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>root->[PAWN_nameDef] learned an importand life lesson today. [PAWN_pronoun] developed new personality trait.</li>
+        <li>root->In the face of danger, [PAWN_nameDef] found a new quality within [PAWN_objctive]self. [PAWN_pronoun] developed new personality trait.</li>
+        <li>root->[PAWN_nameDef] was on the brink of mental break, but persevered. [PAWN_pronoun] developed new personality trait.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>SP_ReplacingTraitTitle</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>root->[PAWN_nameDef] has grown as a person</li>
+        <li>root->[PAWN_nameDef] changed [PAWN_possessive] ways</li>
+        <li>root->[PAWN_nameDef]'s personality changed</li>
+        <li>root->[PAWN_nameDef]'s personality shifted</li>
+        <li>root->[PAWN_nameDef] overcame [PAWN_possessive] limitations</li>
+        <li>root->[PAWN_nameDef] had a change of character</li>
+        <li>root->[PAWN_nameDef] had a change of heart</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>SP_ReplacingTraitText</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>root->[PAWN_nameDef] learned an importand life lesson today. [PAWN_possessive] personality permanently changed.</li>
+        <li>root->[PAWN_nameDef] learned an importand life lesson today. Or at least that's what [PAWN_pronoun] thinks. [PAWN_possessive] personality permanently changed.</li>
+        <li>root->[PAWN_nameDef] had an epiphany today. For goo or bad, [PAWN_possessive] personality permanently changed.</li>
+        <li>root->[PAWN_nameDef] gave it a lot of thought and stopped being [OLDTRAIT]. [PAWN_possessive] personality permanently changed.</li>
+        <li>root->In the face of danger, [PAWN_nameDef] found a new quality within [PAWN_objctive]. [PAWN_possessive] personality permanently changed.</li>
+        <li>root->[PAWN_nameDef]'s limits were tested today and [PAWN_pronoun] passed through. [PAWN_possessive] personality permanently changed.</li>
+        <li>root->[PAWN_nameDef] realised how unnecessarily [OLDTRAIT] [PAWN_pronoun] can be and decided to finally do something about it. [PAWN_possessive] personality permanently changed.</li>
+        <li>root->It was a tough day for [PAWN_nameDef], but [PAWN_pronoun] realised a thing or two. [PAWN_possessive] personality permanently changed.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  [PAWN_possessive]
+
+</Defs>

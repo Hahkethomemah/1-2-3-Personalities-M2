@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30517.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module2", "SimplePersonalities\Module2.csproj", "{964B42BC-3513-4243-9EF1-CEF1B13D6A20}"
 EndProject
@@ -8,12 +8,15 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		v1.2|FullBuild = v1.2|FullBuild
 		v1.3|FullBuild = v1.3|FullBuild
+		v1.4|FullBuild = v1.4|FullBuild
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{964B42BC-3513-4243-9EF1-CEF1B13D6A20}.v1.2|FullBuild.ActiveCfg = v1.2|Any CPU
 		{964B42BC-3513-4243-9EF1-CEF1B13D6A20}.v1.2|FullBuild.Build.0 = v1.2|Any CPU
 		{964B42BC-3513-4243-9EF1-CEF1B13D6A20}.v1.3|FullBuild.ActiveCfg = v1.3|Any CPU
 		{964B42BC-3513-4243-9EF1-CEF1B13D6A20}.v1.3|FullBuild.Build.0 = v1.3|Any CPU
+		{964B42BC-3513-4243-9EF1-CEF1B13D6A20}.v1.4|FullBuild.ActiveCfg = v1.4|Any CPU
+		{964B42BC-3513-4243-9EF1-CEF1B13D6A20}.v1.4|FullBuild.Build.0 = v1.4|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

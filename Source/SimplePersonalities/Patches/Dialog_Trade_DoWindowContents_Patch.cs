@@ -24,7 +24,7 @@ namespace SPM2.Patches
             {
                 if (codes[i].LoadsField(AccessTools.Field(typeof(TradeSession), "playerNegotiator")) && codes[i + 1].LoadsField(AccessTools.Field(typeof(StatDefOf), "TradePriceImprovement")))
                 {
-                    i += 3;
+                    i += 4;
                     yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(Dialog_Trade_DoWindowContents_Patch), nameof(ActualTradePriceImprovement)));
                 }
                 else

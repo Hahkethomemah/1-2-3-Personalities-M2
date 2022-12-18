@@ -8,17 +8,17 @@
     <LangVersion>preview</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <Configurations>v1.2;v1.3</Configurations>
+    <Configurations>v1.2;v1.3;v1.4</Configurations>
     <AssemblyName>SP_Module2_</AssemblyName>
     <RootNamespace>SPM2</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Publicizer" Version="1.0.2">
+    <PackageReference Include="Krafs.Publicizer" Version="2.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.2.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" ExcludeAssets="runtime" />
     <PackageReference Include="Lib.QuickReload" Version="1.1.2" />
   </ItemGroup>
 
@@ -46,13 +46,25 @@
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3052-beta" />
   </ItemGroup>
 
+  <!-- 1.4 -->
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='v1.4|AnyCPU'">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='v1.4|AnyCPU'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3542" />
+  </ItemGroup>
+
   <ItemGroup>
-    <Reference Include="SP_Module1_686">
-      <HintPath>..\..\..\1-2-3-Personalities-M1\1.3\Assemblies\SP_Module1.dll</HintPath>
+    <Reference Include="VanillaSocialInteractionsExpanded">
+      <HintPath>..\..\..\2439736083\1.4\Assemblies\VanillaSocialInteractionsExpanded.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="VanillaSocialInteractionsExpanded">
-      <HintPath>..\..\..\VanillaSocialInteractionsExpanded\1.3\Assemblies\VanillaSocialInteractionsExpanded.dll</HintPath>
+    <Reference Include="SP_Module1">
+      <HintPath>..\..\..\2527258500\1.4\Assemblies\SP_Module1.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

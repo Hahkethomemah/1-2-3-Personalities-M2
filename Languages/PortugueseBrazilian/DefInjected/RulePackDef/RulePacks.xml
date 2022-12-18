@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: root->Residents of this settlement are known to put [DRIVE] above anything else. Send a colonist with matching worldview to make interactions more effective. -->
+  <SP_FactionLeaderDescription.rulePack.rulesStrings.0>root->Moradores deste povoado são conhecidos por colocar o [DRIVE] acima de tudo. Mande um colono com uma maneira parecida de olhar as coisas para fazer as interações serem mais eficientes.</SP_FactionLeaderDescription.rulePack.rulesStrings.0>
+  <!-- EN: root->The inhabitants of this place are known for putting [DRIVE] first. Send a colonist with matching worldview to make interactions more effective. -->
+  <SP_FactionLeaderDescription.rulePack.rulesStrings.1>root->Os habitantes deste lugar são conhecidos por colocar o [DRIVE] em primeiro. Mande um colono com uma maneira parecida de olhar as coisas para fazer as interações serem mais eficientes.</SP_FactionLeaderDescription.rulePack.rulesStrings.1>
+  <!-- EN: root->Under influence of [FACTION_LEADER_nameDef], this settlement promotes acting on [DRIVE]. Send a colonist with matching worldview to make interactions more effective. -->
+  <SP_FactionLeaderDescription.rulePack.rulesStrings.2>root->Sob a influência de [FACTION_LEADER_nameDef], este povoado promove ações através do [DRIVE]. Mande um colono com uma maneira parecida de olhar as coisas para fazer as interações serem mais eficientes.</SP_FactionLeaderDescription.rulePack.rulesStrings.2>
+  <!-- EN: root->Local leader tries to be more like [FACTION_LEADER_nameDef], which makes them vulnerable to manipulation by anyone who acts on [DRIVE]. Send a colonist with matching worldview to make interactions more effective. -->
+  <SP_FactionLeaderDescription.rulePack.rulesStrings.3>root->O líder local tenta ser mais como [FACTION_LEADER_nameDef], o que os deixa vulnerável a manipulação de qualquer um que age com o [DRIVE]. Mande um colono com uma maneira parecida de olhar as coisas para fazer as interações serem mais eficientes.</SP_FactionLeaderDescription.rulePack.rulesStrings.3>
+  <!-- EN: root->[FACTION_LEADER_nameDef] leads [FACTION_LEADER_possessive] people by relying on [DRIVE]. [FACTION_LEADER_possessive] values easily spread among the faction. Send a colonist with matching worldview to make interactions more effective. -->
+  <SP_FactionLeaderDescription.rulePack.rulesStrings.4>root->[FACTION_LEADER_nameDef] lidera seu povo através do [DRIVE]. Os seus valores propagam fácil entre a facção. Mande um colono com uma maneira parecida de olhar as coisas para fazer as interações serem mais eficientes. </SP_FactionLeaderDescription.rulePack.rulesStrings.4>
+  
+  <!-- EN: root->[PAWN_nameDef] learned an importand life lesson today. [PAWN_pronoun] developed new personality trait. -->
+  <SP_ObtainingNewTraitText.rulePack.rulesStrings.0>root->[PAWN_name Def] aprendeu uma lição de vida importante hoje. [PAWN_pronoun] desenvolveu um novo traço de personalidade.</SP_ObtainingNewTraitText.rulePack.rulesStrings.0>
+  <!-- EN: root->In the face of danger, [PAWN_nameDef] found a new quality within [PAWN_objctive]self. [PAWN_pronoun] developed new personality trait. -->
+  <SP_ObtainingNewTraitText.rulePack.rulesStrings.1>root->[PAWN_nameDef] descobriu uma nova qualidade [PAWN_objective] e desenvolveu um novo traço de personalidade.</SP_ObtainingNewTraitText.rulePack.rulesStrings.1>
+  <!-- EN: root->[PAWN_nameDef] was on the brink of mental break, but persevered. [PAWN_pronoun] developed new personality trait. -->
+  <SP_ObtainingNewTraitText.rulePack.rulesStrings.2>root->[PAWN_nameDef] estava na beira de um colapso mental, mas se manteve firme. [PAWN_pronoun] desenvolveu um novo traço de personalidade.</SP_ObtainingNewTraitText.rulePack.rulesStrings.2>
+  
+  <!-- EN: root->[PAWN_nameDef] has grown as a person -->
+  <SP_ObtainingNewTraitTitle.rulePack.rulesStrings.0>root->[PAWN_nameDef] cresceu como pessoa.</SP_ObtainingNewTraitTitle.rulePack.rulesStrings.0>
+  <!-- EN: root->[PAWN_nameDef] developed a new personality trait -->
+  <SP_ObtainingNewTraitTitle.rulePack.rulesStrings.1>root->[PAWN_nameDef] desenvolveu um novo traço de personalidade.</SP_ObtainingNewTraitTitle.rulePack.rulesStrings.1>
+  <!-- EN: root->[PAWN_nameDef] overcame [PAWN_possessive] limitations -->
+  <SP_ObtainingNewTraitTitle.rulePack.rulesStrings.2>root->[PAWN_nameDef] superou seus limites.</SP_ObtainingNewTraitTitle.rulePack.rulesStrings.2>
+  
+  <!-- EN: root->[PAWN_nameDef] learned an importand life lesson today. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.0>root->[PAWN_nameDef] aprendeu uma lição de vida importante hoje. A personalidade [PAWN_objective] mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.0>
+  <!-- EN: root->[PAWN_nameDef] learned an importand life lesson today. Or at least that's what [PAWN_pronoun] thinks. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.1>root->[PAWN_nameDef] aprendeu uma lição de vida importante hoje. Ou ao menos é isso que [PAWN_pronoun] pensa. A personalidade [PAWN_possessive] mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.1>
+  <!-- EN: root->[PAWN_nameDef] had an epiphany today. For goo or bad, [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.2>root->[PAWN_nameDef] teve uma epifania hoje. Pra bom ou pra ruim, sua personalidade mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.2>
+  <!-- EN: root->[PAWN_nameDef] gave it a lot of thought and stopped being [OLDTRAIT]. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.3>root->[PAWN_nameDef] pensou bastante e parou de ser [OLDTRAIT]. Sua personalidade mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.3>
+  <!-- EN: root->In the face of danger, [PAWN_nameDef] found a new quality within [PAWN_objctive]. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.4>root->Diante do perigo, [PAWN_nameDef] achou uma nova qualidade dentro [PAWN_objective]. Sua personalidade mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.4>
+  <!-- EN: root->[PAWN_nameDef]'s limits were tested today and [PAWN_pronoun] passed through. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.5>root->Os limites de [PAWN_nameDef] foram testados hoje, e [PAWN_pronoun] conseguiu. Sua personalidade mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.5>
+  <!-- EN: root->[PAWN_nameDef] realised how unnecessarily [OLDTRAIT] [PAWN_pronoun] can be and decided to finally do something about it. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.6>root->[PAWN_nameDef] percebeu o quão desnecessariamente [OLDTRAIT] [PAWN_pronoun] pode ser e decidiu finalmente fazer algo a respeito. Sua personalidade mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.6>
+  <!-- EN: root->It was a tough day for [PAWN_nameDef], but [PAWN_pronoun] realised a thing or two. [PAWN_possessive] personality permanently changed. -->
+  <SP_ReplacingTraitText.rulePack.rulesStrings.7>root->Foi um dia difícil para [PAWN_nameDef], mas [PAWN_pronoun] descobriu uma coisa ou outra. Sua personalidade mudou permanentemente.</SP_ReplacingTraitText.rulePack.rulesStrings.7>
+  
+  <!-- EN: root->[PAWN_nameDef] has grown as a person -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.0>root->[PAWN_nameDef] cresceu como pessoa.</SP_ReplacingTraitTitle.rulePack.rulesStrings.0>
+  <!-- EN: root->[PAWN_nameDef] changed [PAWN_possessive] ways -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.1>root->[PAWN_nameDef] mudou.</SP_ReplacingTraitTitle.rulePack.rulesStrings.1>
+  <!-- EN: root->[PAWN_nameDef]'s personality changed -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.2>root->A personalidade de [PAWN_nameDef] mudou.</SP_ReplacingTraitTitle.rulePack.rulesStrings.2>
+  <!-- EN: root->[PAWN_nameDef]'s personality shifted -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.3>root->A personalidade de [PAWN_nameDef] foi alterada.</SP_ReplacingTraitTitle.rulePack.rulesStrings.3>
+  <!-- EN: root->[PAWN_nameDef] overcame [PAWN_possessive] limitations -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.4>root->[PAWN_nameDef] superou suas limitações.</SP_ReplacingTraitTitle.rulePack.rulesStrings.4>
+  <!-- EN: root->[PAWN_nameDef] had a change of character -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.5>root->[PAWN_nameDef] teve uma mudança de caráter.</SP_ReplacingTraitTitle.rulePack.rulesStrings.5>
+  <!-- EN: root->[PAWN_nameDef] had a change of heart -->
+  <SP_ReplacingTraitTitle.rulePack.rulesStrings.6>root->[PAWN_nameDef] teve uma mudança de coração.</SP_ReplacingTraitTitle.rulePack.rulesStrings.6>
+  
+</LanguageData>

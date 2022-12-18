@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Random social interactions -->
+
+  <InteractionDef MayRequire="VanillaExpanded.VanillaSocialInteractionsExpanded">
+    <defName>VSIE_Vent_Harmonious</defName>
+    <label>vent</label>
+    <workerClass>VanillaSocialInteractionsExpanded.InteractionWorker_Vent</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+    <initiatorThought>VSIE_SharingBurden_Harmonious</initiatorThought>
+    <recipientThought>VSIE_VentedOnMe_Harmonious</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [TalkTopicLight].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [TalkTopicLight] with [RECIPIENT_nameDef].</li>
+        <li>r_logentry(p=0.8)->[INITIATOR_nameDef] [commentedabout] [TalkTopicLight] to [RECIPIENT_nameDef].</li>
+
+        <li>talkedabout(p=4)->chatted about</li>
+        <li>talkedabout->shared a word about</li>
+        <li>talkedabout->spoke about</li>
+        <li>talkedabout->gabbed about</li>
+        <li>talkedabout->talked about</li>
+        <li>talkedabout->joked about</li>
+        <li>talkedabout->quipped about</li>
+
+        <li>commentedabout->said something about</li>
+        <li>commentedabout->said a word about</li>
+        <li>commentedabout->made a comment about</li>
+        <li>commentedabout->commented about</li>
+        <li>commentedabout->told a joke about</li>
+
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  
+	<ThoughtDef>
+		<defName>VSIE_SharingBurden_Harmonious</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<durationDays>3</durationDays>
+		<stages>
+			<li>
+				<label>sharing the burden</label>
+				<description>It felt good to finally unbottle my feelings to a friend.</description>
+				<baseOpinionOffset>5</baseOpinionOffset>
+				<baseMoodEffect>30</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VSIE_VentedOnMe_Harmonious</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<durationDays>3</durationDays>
+		<stages>
+			<li>
+				<label>my friend vented to me</label>
+				<description>My friend unbottled their feelings to me.</description>
+				<baseOpinionOffset>-5</baseOpinionOffset>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+</Defs>

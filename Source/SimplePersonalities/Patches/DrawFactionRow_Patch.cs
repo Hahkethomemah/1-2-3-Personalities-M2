@@ -19,7 +19,7 @@ namespace SPM2.Patches
             {
                 if (faction.leader != null)
                 {
-                    Rect rect = new Rect(90, rowY + 48, 250, 25);
+                    Rect rect = new Rect(90, rowY + 60, 250, 25);
                     var drive = faction.leader.TryGetEnneagramComp().Enneagram.Root.drive;
                     Widgets.Label(rect, "SP.FactionLeaderDescriptionNoName".Translate(faction.leader.Possessive(), $"<color={Settings.ForcedTraitColor ?? drive.color}>{drive.label}</color>"));
                 }
